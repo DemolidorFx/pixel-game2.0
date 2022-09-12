@@ -1,0 +1,104 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  .modal {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    font-size: 17px;
+    top: 40%;
+    left: 50%;
+    color:white;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #4b596e;
+    width: 600px;
+    max-width: 80%;
+  }
+  .player{
+    color: yellow;
+  }
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+    
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff8f;
+  }
+  
+  .modal-header .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .close-button {
+    font-size:17px;
+    color:white;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 8px;
+    outline: none;
+    border-radius: 8px;
+    background: #007893;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+ 
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .leader{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin-bottom: 5px;
+  
+  }
+        #leaderBoard{
+          color:white;
+          margin-top: -550px;
+          margin-left: 15%;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            padding:50px;
+            background-color: #1c1c1c;
+        }
+        .game{
+            display: flex;
+            justify-content: center;
+           
+        }
+        #canvas{
+            border: 15px solid #196774;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            image-rendering: -moz-crisp-edges;
+            width: 520px;
+            height: 520x;            
+        }

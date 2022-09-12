@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Canvas</title>
+</head>
+<body>
+   <div id="screen">
+    <div class="game">
+        <canvas id="canvas" width="25px" height="25px"></canvas>
+    </div>
+    <div id="leaderBoard">
+      <h2 style="color:white; margin-bottom: 5px; font-family: Arial, Helvetica, sans-serif;">LEADERBOARD:</h2>
+    </div>
+    
+    <div class="modal active" id="modal">
+        <div class="modal-header">
+          <div class="title">Começe a jogar (LÊ TUDO NA MORAL)</div>
+        </div>
+        <div class="modal-body">
+          <div>
+            <dl style="margin-top: 5px;">
+                <dt>Como joga:</dt>
+                <dd style="margin-left:28px; margin-top: 8px;">- Eu sei que está uma merda completamente sem sentido e desbalanceada </dd>
+                <dd style="margin-left:28px; margin-top: 8px;">- Sim é só esse espaço pequeno e o seu personagem é um pixel amarelo</dd>
+                <dd style="margin-left:28px; margin-top: 8px;">- Só funciona em computador pq fiquei com preguiça de portar pra celular</dd>
+                <dd style="margin-left:28px; margin-top: 8px;">- Eu realmente não espero que alguém jogue isso por mais de 20 segundos</dd>
+                <dd style="margin-left:28px; margin-top: 8px;">- Você se movimenta no WASD;</dd>
+                <dd style="margin-left:28px; margin-top: 8px;">- Use as setinhas pra mirar</dd>
+                <dd style="margin-left:28px; margin-top: 8px;">- Se segurar espaço você vai carregar um poder que pode puxar um inimigo para perto de ti</dd>
+                <dd style="margin-left:28px; margin-top: 8px; margin-bottom: 25px;">- Você só pode puxar um inimigo se soltar o botão de espaço no momento exato em que o poder estiver em cima dele</dd>
+            </dl>
+            <div align="center">
+                <p><b>Coloca seu nome aí:</b></p>
+                <input type="text" id='userName' style="outline:none; padding: 6px; border:none; width: 170px; font-size: 17px;" />
+                <p><button id='button'data-close-button class="close-button">JOGAR</button></p>      
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay active" id="overlay"></div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>
