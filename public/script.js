@@ -282,16 +282,16 @@ function move(event){
     if(logado){
         const posX = game.players[currentUserId].x
         const posY = game.players[currentUserId].y
-            if(event.key === 'w' && game.players[currentUserId].y > 0){
+            if(event.keyCode === 87 && game.players[currentUserId].y > 0){
                 game.players[currentUserId].y = posY - 1
             }
-            else if(event.key === 'a' && game.players[currentUserId].x > 0){
+            else if(event.keyCode === 65 && game.players[currentUserId].x > 0){
                 game.players[currentUserId].x = posX - 1
             }
-            else if(event.key === 's' && game.players[currentUserId].y < 24){
+            else if(event.keyCode === 83 && game.players[currentUserId].y < 24){
                 game.players[currentUserId].y = posY + 1
             }
-            else if(event.key === 'd' && game.players[currentUserId].x < 24){
+            else if(event.keyCode === 68 && game.players[currentUserId].x < 24){
                 game.players[currentUserId].x = posX + 1
             }
 
